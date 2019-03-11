@@ -1,0 +1,133 @@
+/* Scss Document */
+@import "imports/mixins";
+
+body{
+	font-size: 18px;
+	font-family:"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif" ;
+	background: url('../images/colorful-background.jpg');
+	
+		header{
+			font-size: 26px;	
+			color: black;
+			margin: 0 auto;
+			text-align: center;
+			
+			h1{
+				    margin: 20px 0px 0px 0px;
+    				font-size: 40px;
+    				font-weight: bold;
+			}
+			
+			#title2{
+				    margin-bottom: 40px;
+    				font-size: 14px;
+    				font-weight: bold;
+			}
+		}	
+	
+	section{
+		@include box(700px,350px,#ccc);
+		@include border-radius(10px);
+		@include box-shadow();
+		 @media screen and (max-width: 600px) {
+					float: left;
+			 		height: auto;
+			 		margin: 15px;
+				}
+		.container-top{
+			background: black;
+			float: left;
+			padding: 30px 0px;
+			width:100%;
+			color: wheat;
+			
+			.weather-infor{
+				div{
+					width:50%;
+					float:left;
+					@media screen and (max-width: 600px) {
+						width: 100%;
+					}
+				}
+				#temp{
+						font-size: 45px;
+						text-align: center;
+						font-weight: bold;
+					@media screen and (max-width: 600px) {
+						#weather-icon{margin-left: 15px;}
+					}
+					
+					#cond{
+						font-size: 20px;
+						text-align: right;
+						letter-spacing: 3px;
+						@media screen and (max-width: 600px) {
+							text-align: center;
+						}
+					}
+					.scale{
+						display: inline-block;
+						font-size: 28px;
+						&.not-selected{
+							color: #787777;
+						}
+					}
+
+				}
+			}
+		}
+			
+		.place{
+			width:50%;			
+			float: right;
+			@media screen and (max-width: 600px) {
+						width: 100%;
+					}
+			div{
+				width:100%;
+				float: left;
+				text-align: center;
+			}
+			#state{
+				font-size: 25px;
+				margin-top: 25px;
+			}
+		}
+		
+		
+		#weather-condition{
+			float: left;
+			width: calc(100% - 20px);
+			padding: 10px;
+			div{
+				width:21%;
+				margin: 10px;
+				float: left;
+				@media screen and (max-width: 600px) {
+					width:45%;
+				}
+				@media screen and (max-width: 490px) {
+					width:40%;
+				}
+				label{
+					width:100%;
+					float: left;
+					text-align: center;
+					font-weight: bold;
+				}
+				div{
+					width:100%;
+					float: left;
+					text-align: center;
+					margin: 10px 0px;
+					
+					&.infor-icon{
+						min-height:60px;
+						
+					}
+				}
+			}
+		}
+	}
+	
+}
